@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchActivity">
+
+    <Button
+        android:id="@+id/btnResult"
+        style="@style/DefaultSolid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/see_result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <Button
+            android:id="@+id/btnAddAway1"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/btnAddAway2"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/btnAddAway3"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+        <Button
+            android:id="@+id/btnAddHome1"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/btnAddHome2"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/btnAddHome3"
+            style="@style/DefaultSolid"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvHomeTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/home_team"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchHomeTeam" />
+
+    <TextView
+        android:id="@+id/tvAwayTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/away_team"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchAwayTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchAwayTeam" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivMatchAwayTeam"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="5dp"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivMatchHomeTeam" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivMatchHomeTeam"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="90dp"
+        android:elevation="5dp"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/live_score_match"
+        android:textColor="@color/black"
+        android:textFontWeight="900"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvScoreHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/ivMatchHomeTeam" />
+
+    <TextView
+        android:id="@+id/tvScoreAway"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchAwayTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchAwayTeam"
+        app:layout_constraintTop_toTopOf="@+id/tvScoreHome" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/colon"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvScoreAway"
+        app:layout_constraintStart_toEndOf="@+id/tvScoreHome"
+        app:layout_constraintTop_toTopOf="@+id/tvScoreHome" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_score"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreHome" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_score"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ivMatchAwayTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivMatchAwayTeam"
+        app:layout_constraintTop_toBottomOf="@+id/tvScoreHome" />
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/DefaultOutline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toTopOf="@+id/btnResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

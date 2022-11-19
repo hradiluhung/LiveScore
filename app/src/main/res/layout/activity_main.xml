@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAwayTeam"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="5dp"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivHomeTeam" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivHomeTeam"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="98dp"
+        android:elevation="5dp"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/live_score_match"
+        android:textColor="@color/black"
+        android:textFontWeight="900"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditImgHome"
+        style="@style/DefaultSolid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_edit"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="@+id/ivHomeTeam"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivHomeTeam"
+        app:layout_constraintTop_toBottomOf="@+id/ivHomeTeam" />
+
+    <Button
+        android:id="@+id/btnEditImgAway"
+        style="@style/DefaultSolid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@drawable/ic_edit"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="@+id/ivAwayTeam"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivAwayTeam"
+        app:layout_constraintTop_toBottomOf="@+id/ivAwayTeam" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/DefaultSolid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etHomeTeam"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/home_team"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivHomeTeam"
+        app:layout_constraintEnd_toEndOf="@+id/ivHomeTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivHomeTeam" />
+
+    <EditText
+        android:id="@+id/etAwayTeam"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/away_team"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/ivAwayTeam"
+        app:layout_constraintEnd_toEndOf="@+id/ivAwayTeam"
+        app:layout_constraintStart_toStartOf="@+id/ivAwayTeam" />
+</androidx.constraintlayout.widget.ConstraintLayout>
